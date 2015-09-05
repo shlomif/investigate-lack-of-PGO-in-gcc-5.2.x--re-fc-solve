@@ -1,0 +1,10 @@
+1. Make sure gcc, GNU make , etc. are in the path (a GNU/Linux system is
+preferable).
+
+2. cd to the source/ directory and type "bash RUN_PGO.bash" . This will
+build everything.
+
+3. Type "bash RUN_ME_TO_TIME.bash" to time the results.
+
+Here (= Mageia Linux x86-64 6/Cauldron) the gcc-4.9.x results are faster than
+those of the ones with gcc-5.2.1-0.20150811.4.mga6 .
