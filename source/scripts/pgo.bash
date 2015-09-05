@@ -40,7 +40,7 @@ run_timing()
     if [ -x ~/bin/sudo_time_fcs ] ; then
         sudo ~/bin/sudo_time_fcs "$@"
     else
-        sudo_renice ./freecell-solver-range-parallel-solve "$@"
+        bash ./sudo_renice ./freecell-solver-range-parallel-solve "$@"
     fi
 }
 
