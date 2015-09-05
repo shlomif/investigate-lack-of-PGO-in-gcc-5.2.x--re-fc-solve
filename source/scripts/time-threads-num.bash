@@ -36,17 +36,6 @@ ARGS="${ARGS:--l gi}"
 DUMPS_DIR="$OUT_DIR/$(date +"DUMPS-%s")"
 mkdir -p "$DUMPS_DIR"
 
-p_dir="__p"
-if ! test -e "$p_dir" ; then
-    cp -R "$(dirname "$0")"/../Presets "$p_dir"
-    cp "Presets/presetrc" "$p_dir/"
-
-    P="$(cd "$p_dir"/presets && pwd)" \
-        perl -lpi -e 's!\A(dir=).*\z!$1$ENV{P}/!ms' ./"$p_dir"/presetrc
-fi
-
-export FREECELL_SOLVER_PRESETRC="$(ls $(pwd)/"$p_dir"/presetrc)"
-
 if $RUN_SERIAL ; then
     echo "Testing Serial Run"
     # For letting the screen update.
@@ -61,6 +50,6 @@ for NUM in $(seq "$MIN" "$MAX") ; do
     sleep 1
     $PROG 1 "$MAX_BOARD" 4000 \
         --num-workers "$NUM" \
-        $ARGS > "$(printf "%s/dump%.3i" "$DUMPS_DIR" "$NUM")"
+        $ARGS | tee "$(printf "%s/dump%.3i" "$DUMPS_DIR" "$NUM")"
 done
 
