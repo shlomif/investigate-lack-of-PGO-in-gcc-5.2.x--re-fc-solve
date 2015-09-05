@@ -1,0 +1,69 @@
+/* vim:syn=tt2
+*/
+#include <tap.h>
+#include <string.h>
+
+#include "../card.c"
+
+static int main_tests(void)
+{
+    char buffer[1024];
+
+[% SET num_tests = 0 %]
+[% FOREACH suit = suits %]
+[% FOREACH rank = ranks %]
+[% FOREACH t = [0,1] %]
+[%- SET t_key = t ? "t" : "non_t" -%]
+[%- SET card_string = ('"'
+            _   rank.value.${t_key}
+            _   suit.value
+            _   '"') -%]
+[% IF 0 # Removing because the set_suit and set_rank() functions
+        # were removed.
+%]
+    {
+        fcs_card_t mycard;
+        char * ret;
+
+        mycard = fc_solve_empty_card;
+
+        fcs_card_set_suit(mycard, [% suit.idx %]);
+        fcs_card_set_rank(mycard, [% rank.idx %]);
+
+        ret = fc_solve_card_perl2user(mycard, buffer, [% t %]);
+        /* TEST */
+        [%- SET num_tests = num_tests + 1 -%]
+        ok (ret == buffer,
+           "Return value is the beginning of the buffer.");
+        /* TEST */
+        [%- SET num_tests = num_tests + 1 -%]
+        ok (!strcmp(buffer, [% card_string %]),
+            "Trying to render " [% card_string %] " into a string");
+    }
+[% END %]
+    {
+        fcs_card_t mycard = fcs_make_card([% rank.idx %], [% suit.idx %]);
+
+        char * ret = fc_solve_card_perl2user(mycard, buffer, [% t %]);
+        /* TEST */
+        [%- SET num_tests = num_tests + 1 -%]
+        ok (ret == buffer,
+           "fcs_make_card() - Return value is the beginning of the buffer.");
+        /* TEST */
+        [%- SET num_tests = num_tests + 1 -%]
+        ok (!strcmp(buffer, [% card_string %]),
+            "fcs_make_card() - Trying to render " [% card_string %] " into a string");
+    }
+[% END %]
+[% END %]
+[% END %]
+
+    return 0;
+}
+
+int main(void)
+{
+  plan_tests([% num_tests %]);
+  main_tests();
+  return exit_status();
+}

@@ -1,0 +1,68 @@
+---
+digests:
+  375783-dbm-sol:
+    hexdigest: 496a6ea4527205acab7ae791daeccc0fef6a6a499582c13c3d90dcc280509b7a
+    len: 31517
+  bakers_game24default:
+    hexdigest: c9e51e5daf2d9f4e3cbb8bc8ee8029694c896c65ea6eb9a7725f54d5acbd288e
+    len: 23938
+  eight_off200:
+    hexdigest: f4541b797405951adcd266e47fcb017c44295cf1b77b038ad057a4c5ae577f3e
+    len: 33298
+  eight_off200default:
+    hexdigest: 057f7964b7146f99b37aa6e33355dbfabc8af6907cefe866d5f4c2b537d698d6
+    len: 33298
+  forecell1099default:
+    hexdigest: e82c8f7aa7f225e3fbffbf142bbad02bd87a1eede2dfef45c575320332e6c3f8
+    len: 29022
+  freecell1941:
+    hexdigest: 58987472972aef5d1dfa228b38d61996017fb0c97fe4e26a94342eb4e04d1f24
+    len: 22245
+  freecell24:
+    hexdigest: 1ba0c0ce085e72be7f608ffb8fe44367382eb0bbbf06da6ab136473af5d8353a
+    len: 32193
+  freecell24_board_with_founds_0:
+    hexdigest: 1ba0c0ce085e72be7f608ffb8fe44367382eb0bbbf06da6ab136473af5d8353a
+    len: 32193
+  freecell24_children_playing_ball:
+    hexdigest: 3f90b460eb665e6583a91edc845eb433ed5e04168b03cd05e6a51b3b3294397c
+    len: 26821
+  freecell24_sentient_pearls:
+    hexdigest: b6ef4a6b354373fd432fc8d161c1156d02c76f68fb5b6435c0d6a6603d4df658
+    len: 30096
+  freecell24empty:
+    hexdigest: 31fc6e1191e6d3ac1ae5662c934c693f7a8e7031b80fd252f1bfb1548f011d76
+    len: 32280
+  freecell24with_empty_soft_thread_name:
+    hexdigest: ff9d1c4689177a6669712e162acd5885261f7b5fd29b19a97579e3429f80961e
+    len: 27798
+  freecell254076_l_by:
+    hexdigest: 712350d4798716bb13f506eb37889583610e7f1ad61899b3e52a231d65599ee2
+    len: 51781
+  freecell617jgl:
+    hexdigest: 34bc7c9fe871e50275975323be93c133e73f135db751a985a32f92323f1d6377
+    len: 27193
+  qualified_seed_for_6240:
+    hexdigest: af7677ddc9f63a07073c6fc1053554937724544b06d6492cbcbc771996eff9d6
+    len: 22417
+  random_dfs_with_rand_parens:
+    hexdigest: ea188af2dbc420480508f0a51e4ffb97ab736cc01a24d9117a578fc0caf6b4f4
+    len: 44129
+  relaxed_freecell11982:
+    hexdigest: df7e063b0610e6602989fa90d928e7bfed7a3ad72187eec05b12d6051ef7324b
+    len: 33426
+  seahaven_towers1977fools-gold:
+    hexdigest: e63deaf64fcac8b388385a2d6235f2b45df037b531877b999640d0b6798a58ec
+    len: 18581
+  simple_simon19806default:
+    hexdigest: f0668f5e156ee0d9e6ff835b9c48aedc2bb475e52263b0f532044d05c240175a
+    len: 20447
+  simple_simon1with_i:
+    hexdigest: e75886f7ecac88512ff29251760d2ac5f5313a5c8840187b0ae3855918b5f83b
+    len: 21659
+  simple_simon1with_next_instance:
+    hexdigest: fa6d7114b05d8b5b06961b966242646cc18e8fe5add383445fd914bb4f414943
+    len: 21661
+  simple_simon24default:
+    hexdigest: 6ebea55ab4149055b7c9d0b3e46a29092d45a1baa04da02565ff3dcde47a1d50
+    len: 22216
