@@ -1,5 +1,6 @@
 1. Make sure gcc, GNU make , etc. are in the path (a GNU/Linux system is
-preferable).
+preferable). Also install libtcmalloc, which is part of the gperftools /
+google-perftools package.
 
 2. cd to the source/ directory and type "bash RUN_PGO.bash" . This will
 build everything.
