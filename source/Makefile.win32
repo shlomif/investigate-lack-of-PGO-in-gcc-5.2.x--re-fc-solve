@@ -93,7 +93,7 @@ freecell-solver-static.lib: $(OBJECTS)
 	$(LIB32) -lib $(OBJECTS) /out:freecell-solver-static.lib
 
 freecell-solver.dll: $(OBJECTS) freecell-solver.def
-	$(LIB32) kernel32.lib user32.lib gdi32.lib /dll /out:freecell-solver.dll /implib:freeecell-solver.lib /DEF:freecell-solver.def $(OBJECTS) 
+	$(LIB32) kernel32.lib user32.lib gdi32.lib /dll /out:freecell-solver.dll /implib:freeecell-solver.lib /DEF:freecell-solver.def $(OBJECTS)
 
 clean:
 	del *.obj *.exe *.lib *.dll *.exp
